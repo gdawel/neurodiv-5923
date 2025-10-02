@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->dropColumn('user_type');
-            $table->enum('usertype', ['Admin','Gestor','Cliente','Convidado'])
+            $table->enum('usertype', ['Admin','Cliente'])
                     ->after('password');
         });
     }

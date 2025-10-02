@@ -300,7 +300,7 @@ class ControladorRelatorios extends Component
                     report($e);
                     }
 
-                    $this->js("setTimeout(() => { Livewire.navigate('/meus-pedidos') }, 6000)");
+                    $this->js("setTimeout(() => { Livewire.navigate('/meus-pedidos/') }, 6000)");
                 
                 break;
             

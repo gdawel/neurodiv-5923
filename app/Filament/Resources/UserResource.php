@@ -54,9 +54,9 @@ class UserResource extends Resource
                         Forms\Components\Select::make('usertype')
                             ->options([
                                 'Admin' => 'Admin',
-                                'Gestor' => 'Gestor',
+                            //    'Gestor' => 'Gestor',
                                 'Cliente' => 'Cliente',
-                                'Convidado' => 'Convidado',
+                            //    'Convidado' => 'Convidado',
                             ])
                             ->label('Tipo de Usuário')
                             ->required(),
@@ -78,9 +78,33 @@ class UserResource extends Resource
                             ->label('UF do Nascimento')
                             
                             ->options([
-                                'BA' => 'BA',
-                                'SP' => 'SP',
-                                'PE' => 'PE'
+                                'AC' => 'Acre',
+                                'AL' => 'Alagoas',
+                                'AP' => 'Amapá',
+                                'AM' => 'Amazonas',
+                                'BA' => 'Bahia',
+                                'CE' => 'Ceará',
+                                'DF' => 'Distrito Federal',
+                                'ES' => 'Espírito Santo',
+                                'GO' => 'Goiás',
+                                'MA' => 'Maranhão',
+                                'MT' => 'Mato Grosso',
+                                'MS' => 'Mato Grosso do Sul',
+                                'MG' => 'Minas Gerais',
+                                'PA' => 'Pará',
+                                'PB' => 'Paraíba',
+                                'PR' => 'Paraná',
+                                'PE' => 'Pernambuco',
+                                'PI' => 'Piauí',
+                                'RJ' => 'Rio de Janeiro',
+                                'RN' => 'Rio Grande do Norte',
+                                'RS' => 'Rio Grande do Sul',
+                                'RO' => 'Rondônia',
+                                'RR' => 'Roraima',
+                                'SC' => 'Santa Catarina',
+                                'SP' => 'São Paulo',
+                                'SE' => 'Sergipe',
+                                'TO' => 'Tocantins'
                             ]),
                            /*  ->dehydrated()
                             ->unique(Testes::class, 'slug', ignoreRecord: true), */

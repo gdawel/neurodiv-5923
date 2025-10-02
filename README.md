@@ -24,6 +24,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
  
+## [00.05.01] - 2025-10-02 
+- This is a devepment version. The first version to be released will have the version updated to [1.0.0].
+
+### Changed
+- User profile received LGPD complience message to erase sensative and personal data, if asked.
+- Added a alert message in the buttom "Relatorio Inexistente" so the user can check if the test was answered or skipped by admin
+
+### Added
+- Admin Panel statistics
+
 ## [00.04.01] - 2025-09-22 
 - This is a devepment version. The first version to be released will have the version updated to [1.0.0].
 

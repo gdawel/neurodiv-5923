@@ -154,7 +154,7 @@ class OrdersResource extends Resource
                                     ->options([
                                         'novo' => 'Novo',
                                         'iniciado' => 'Iniciado',
-                                        'gerando' => 'Gerando',
+                                    //   'gerando' => 'Gerando',
                                         'concluido' => 'Concluído'
                                         
                                     ])
@@ -168,7 +168,7 @@ class OrdersResource extends Resource
                                     ->icons([
                                         'novo' => 'heroicon-m-sparkles',
                                         'iniciado' => 'heroicon-m-arrow-path',
-                                        'gerando' => 'heroicon-m-arrow-path',
+                                    //    'gerando' => 'heroicon-m-arrow-path',
                                         'concluido' => 'heroicon-m-check-badge'
                                         
                                     ])

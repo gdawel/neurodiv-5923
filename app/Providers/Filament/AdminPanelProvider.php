@@ -5,11 +5,12 @@ namespace App\Providers\Filament;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
-use Filament\Pages;
+// RETIRE: use Filament\Pages;
+use App\Filament\Pages\Dashboard; // ADICIONE: Aponta para o seu Dashboard
 use Filament\Panel;
 use Filament\PanelProvider;
 use Filament\Support\Colors\Color;
-use Filament\Widgets;
+// RETIRE: use Filament\Widgets;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
@@ -28,24 +29,23 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->navigationGroups([
-                    
-                    'NeuroDiv - Vendas',
-                    'NeuroDiv - Configurações',
-                    'Conteúdo do Blog',
-                    'Configuração do Site',
-                ])
+                'NeuroDiv - Vendas',
+                'NeuroDiv - Configurações',
+                'Conteúdo do Blog',
+                'Configuração do Site',
+            ])
             ->colors([
                 'primary' => Color::Amber,
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([
-                Pages\Dashboard::class,
+                Dashboard::class, // ALTERADO: Agora usa a sua página com filtro
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
-                Widgets\AccountWidget::class,
-                //      Widgets\FilamentInfoWidget::class,
+                // Widgets\AccountWidget::class, // REMOVIDO: Vamos controlar o layout na página
+                // Os outros widgets também serão controlados na página
             ])
             ->middleware([
                 EncryptCookies::class,
@@ -60,7 +60,6 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
-            ])
-            ;
+            ]);
     }
 }
