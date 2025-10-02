@@ -2,7 +2,7 @@
 
 namespace App\Filament\Widgets;
 
-use App\Models\OrderItems;
+use App\Models\Orderitems;
 use Filament\Tables;
 use Filament\Widgets\TableWidget as BaseWidget;
 use Illuminate\Database\Eloquent\Builder;
@@ -41,7 +41,7 @@ class OrderItemsMatrix extends BaseWidget
         $startDate = $this->dashboardFilters['start'] ?? null;
         $endDate = $this->dashboardFilters['end'] ?? null;
         
-        return OrderItems::query()
+        return Orderitems::query()
             ->whereNotNull('codTeste')
             ->select([
                 'codTeste',
