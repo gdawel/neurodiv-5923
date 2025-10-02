@@ -27,7 +27,7 @@ class Dashboard extends BaseDashboard
     {
         return [
             MainStatsOverview::class,
-            OrderItemsMatrix::class,
+            //OrderItemsMatrix::class,
         ];
     }
 }

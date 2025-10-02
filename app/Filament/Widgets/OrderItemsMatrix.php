@@ -12,7 +12,7 @@ class OrderItemsMatrix extends BaseWidget
 {
     protected static ?int $sort = 2;
     protected int | string | array $columnSpan = 'full';
-    protected ?array $dashboardFilters = [];
+    public ?array $dashboardFilters = [];
     
     protected function getListeners(): array
     {

@@ -10,7 +10,7 @@ use Illuminate\Support\Number;
 
 class MainStatsOverview extends BaseWidget
 {
-    protected ?array $dashboardFilters = [];
+    public ?array $dashboardFilters = [];
     protected int | string | array $columnSpan = 'full';
 
     protected function getListeners(): array
