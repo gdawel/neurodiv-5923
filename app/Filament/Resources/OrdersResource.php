@@ -154,21 +154,21 @@ class OrdersResource extends Resource
                                     ->options([
                                         'novo' => 'Novo',
                                         'iniciado' => 'Iniciado',
-                                    //   'gerando' => 'Gerando',
+                                        'pendente' => 'Pendente',
                                         'concluido' => 'Concluído'
                                         
                                     ])
                                     ->colors([
                                         'novo' => 'info',
                                         'iniciado' => 'warning',
-                                        'gerando' => 'warning',
+                                        'pendente' => 'danger',
                                         'concluido' => 'success'
                                         
                                     ])
                                     ->icons([
                                         'novo' => 'heroicon-m-sparkles',
                                         'iniciado' => 'heroicon-m-arrow-path',
-                                    //    'gerando' => 'heroicon-m-arrow-path',
+                                        'pendente' => 'heroicon-m-arrow-path',
                                         'concluido' => 'heroicon-m-check-badge'
                                         
                                     ])
