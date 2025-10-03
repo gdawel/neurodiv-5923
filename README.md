@@ -24,6 +24,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
  
+## [00.05.03] - 2025-10-03 
+- This is a devepment beta version, ready for client to test.
+- The first version to be released will have the version updated to [1.0.0].
+
+### Changed
+- Minor change in pedido-sucesso page to adjust endpoint for the home page.
+- composer.jason was changed to adjust the livewire version in last commit called v. 00.05.02.
+
 ## [00.05.01] - 2025-10-02 
 - This is a devepment version. The first version to be released will have the version updated to [1.0.0].
 
