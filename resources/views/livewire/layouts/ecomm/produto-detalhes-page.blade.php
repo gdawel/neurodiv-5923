@@ -9,8 +9,9 @@
             @if ($grupoSelecionado->imagemGrupo)
                 src="{{ asset('storage/' . $grupoSelecionado->imagemGrupo ) }}"
             @else
-                src="{{ asset('storage/ywbjBmIX0KdJgKCBS5sqNwRF2lRbXe-metaTWluaS1MT0dPXzIwMjQucG5n-.png') }}"
-            @endif    
+                src="{{ asset('images/logo_redondo_200x200.png') }}"
+                
+            @endif 
                 alt="{{ $grupoSelecionado->nomeGrupo }}">
     </div>
     <!-- End Col -->

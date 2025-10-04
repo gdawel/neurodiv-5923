@@ -24,6 +24,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
  
+## [00.05.05] - 2025-10-03 
+- This is a devepment beta version, ready for client to test.
+- The first version to be released will have the version updated to [1.0.0].
+
+### Changed
+- Products page fix: standard logo not showing if image is not set for the testgroup.
+
 ## [00.05.04] - 2025-10-03 
 - This is a devepment beta version, ready for client to test.
 - The first version to be released will have the version updated to [1.0.0].
