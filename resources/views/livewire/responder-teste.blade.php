@@ -90,7 +90,7 @@
                             class="mt-1 block mb-2 text-sm font-medium text-gray-900 dark:text-white">É muito importante que comente sua resposta.</label>
                         <textarea wire:model="comentariosCliente" id="comentarios" rows="1" 
                             class="items-center p-2.5 w-1/2 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
-                            placeholder="Escreva seu comentário aqui...">{{ $this->comentariosCliente }}</textarea>
+                            placeholder="Escreva seu comentário">{{ $this->comentariosCliente }}</textarea>
                         @error('comentariosCliente')
                             <div class="p-4 items-center text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400">@error('comentariosCliente') {{ $message }} @enderror</div>
                         @enderror

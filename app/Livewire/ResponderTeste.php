@@ -426,10 +426,20 @@ class ResponderTeste extends Component
         $this->qualIntensidade = OpcoesRespostas::where('id', $this->opcRespIntensidade)->get();
         //dd($this->qualSeqResposta);
 
-        if(!isset($this->qualIntensidade[0]->valorResposta)) {
+        /* if(!isset($this->qualIntensidade[0]->valorResposta)) {
                 $intensidade = ""; }
             else {
                 $intensidade = $this->qualIntensidade[0]->valorResposta;
+            }; */
+
+        if(!isset($this->qualIntensidade[0]->valorResposta)) {
+                $intensidade = ""; }
+            else {
+                if($this->codTeste == '08-CmptRpttv') {
+                $intensidade = $this->qualIntensidade[0]->valorResposta;
+                } else {
+                    $intensidade = intval($this->qualIntensidade[0]->valorResposta);
+                }
             };
         
         if($this->codTeste == '01-HstCrpEnrdvrgc' || 

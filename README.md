@@ -24,6 +24,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
  
+## [00.05.08] - 2025-10-08
+- This is a devepment beta version, ready for client to test.
+- The first version to be released will have the version updated to [1.0.0].
+
+### Changed
+- Shortened placeholder message on "Comentários" to fit the space on mobile.
+- ResponderTeste: fixed error on intensidade (intval) on finalizarTeste method.
+
 ## [00.05.07] - 2025-10-07 
 - This is a devepment beta version, ready for client to test.
 - The first version to be released will have the version updated to [1.0.0].
