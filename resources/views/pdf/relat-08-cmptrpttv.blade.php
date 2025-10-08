@@ -126,5 +126,14 @@
         </tbody>
     </table>
     
-    {{-- ... (resto do seu relatório, como a seção de fontes) ... --}}
+    <div class="mt-8 sm:mt-12">
+        {{-- <h4 class="text-lg font-semibold text-gray-800 dark:text-neutral-200">Como entender o seu resultado de estresse e fadiga:<br></h4> --}}
+        <p class="font-bold text-black dark:text-neutral-500">{!! $dadosRelatorio['textoFecha'] !!}</p>
+        <div class="mt-2">
+          <p class="block text-sm font-bold text-black dark:text-neutral-200">{!! $dadosRelatorio['textoRodape'] !!}</p>
+          
+        </div>
+    </div>
+
+    
 @endsection
