@@ -8,7 +8,7 @@
             <div class="mt-5 sm:mt-12 text-center">
                 <p class="text-sm text-gray-400">
                     © SOBRARE. Todos os direitos reservados. CNPJ: 10.786.446/0001-47 | CRP-J/SP 3825/J
-                    <br><br>Contatos: faleconosco@sobrare.com.br / +55 11 5549-2943
+                    <br><br>Contatos: <br>faleconosco@sobrare.com.br<br>+55 11 5549-2943
                 </p>
             </div>
 

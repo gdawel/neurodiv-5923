@@ -24,6 +24,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
  
+## [00.05.11] - 2025-10-09
+- Fix text aligment in the footer.
+- Enable "Entrar" buttom in navbar, so the clients can have access to the system.
+
 ## [00.05.10] - 2025-10-09
 - This is a devepment beta version, ready for client to test.
 - The first version to be released will have the version updated to [1.0.0].
