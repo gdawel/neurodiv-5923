@@ -3,19 +3,21 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\ControleRelatoriosResource\Pages;
-use App\Models\ControleRelatorios; // Garanta que o namespace do seu modelo está correto
+use App\Models\ControleRelatorios;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Filament\Tables\Actions\Action;
+use Filament\Tables\Actions\ActionGroup;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\BadgeColumn; // Importante adicionar o BadgeColumn
 
 class ControleRelatoriosResource extends Resource
 {
     protected static ?string $model = ControleRelatorios::class;
     
-    // Nome para aparecer na navegação
     protected static ?string $navigationLabel = 'Controle de Relatórios'; 
     protected static ?string $modelLabel = 'Relatório';
     protected static ?string $pluralModelLabel = 'Relatórios';
@@ -23,50 +25,34 @@ class ControleRelatoriosResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-document-chart-bar';
 
     /**
-     * Define o formulário para edição.
-     * Apenas o status poderá ser alterado.
+     * 1. IMPEDIR ALTERAÇÃO:
+     * O formulário agora está vazio, pois não queremos permitir edição.
+     * A página de edição será desabilitada.
      */
     public static function form(Form $form): Form
     {
-        return $form
-            ->schema([
-                Forms\Components\Select::make('status')
-                    ->options([
-                        'pendente' => 'Pendente',
-                        'gerando' => 'Gerando',
-                        'completo' => 'Completo',
-                        'falha' => 'Falha',
-                    ])
-                    ->required(),
-                
-                // Campos de visualização (não editáveis)
-                Forms\Components\TextInput::make('user.name')
-                    ->label('Cliente')
-                    ->disabled(),
-                
-                Forms\Components\TextInput::make('testes.nomeTeste')
-                    ->label('Teste')
-                    ->disabled(),
-
-                Forms\Components\Placeholder::make('created_at')
-                    ->label('Criado em')
-                    ->content(fn ($record): ?string => $record?->created_at?->format('d/m/Y H:i')),
-            ]);
+        return $form->schema([]);
     }
 
-    /**
-     * Define a tabela de listagem.
-     */
     public static function table(Table $table): Table
     {
         return $table
+            // 3. CLASSIFICAÇÃO PADRÃO: Ordena pela data de criação, do mais novo para o mais antigo.
+            ->defaultSort('created_at', 'desc')
             ->columns([
-                Tables\Columns\TextColumn::make('id')->sortable(),
-                Tables\Columns\TextColumn::make('user.name')->label('Cliente')->searchable(),
-                Tables\Columns\TextColumn::make('testes.nomeTeste')->label('Teste')->searchable(),
-                
-                // CORREÇÃO: Usar BadgeColumn para que as cores funcionem
-                Tables\Columns\TextColumn::make('status')
+                TextColumn::make('user.name')
+                    ->label('Cliente')
+                    ->searchable()
+                    ->sortable(), // Permite classificar por esta coluna
+
+                TextColumn::make('testes.nomeTeste')
+                    ->label('Nome do Relatório')
+                    ->searchable()
+                    ->sortable(), // Permite classificar por esta coluna
+
+                BadgeColumn::make('status')
+                    ->searchable()
+                    ->sortable() // Permite classificar por esta coluna
                     ->colors([
                         'primary' => 'gerando',
                         'warning' => 'pendente',
@@ -74,58 +60,53 @@ class ControleRelatoriosResource extends Resource
                         'danger' => 'falha',
                     ]),
                 
-                Tables\Columns\TextColumn::make('created_at')->dateTime('d/m/Y H:i')->label('Criado em'),
+                TextColumn::make('created_at')
+                    ->dateTime('d/m/Y H:i')
+                    ->label('Data')
+                    ->sortable(), // Permite classificar por esta coluna
             ])
             ->filters([
                 //
             ])
             ->actions([
-                /* Tables\Actions\EditAction::make(), */ // Permite a edição (abre o formulário acima)
-                //Tables\Actions\ViewAction::make(), // Opcional, o EditAction já permite ver os dados
-                
-                // CORREÇÃO: Ação de download corrigida
-                Action::make('download')
-                    ->label('Baixar PDF')
-                    ->icon('heroicon-o-document-arrow-down')
-                    ->url(fn (ControleRelatorios $record): ?string => route('reports.download', $record))
-                    ->openUrlInNewTab()
-                    // A condição deve bater com o valor no banco ('completo')
-                    ->visible(fn (ControleRelatorios $record): bool => $record->status === 'completo' && !empty($record->file_path)),
+                ActionGroup::make([
+                    Action::make('download')
+                        ->label('Baixar PDF')
+                        ->icon('heroicon-o-document-arrow-down')
+                        ->url(fn (ControleRelatorios $record): ?string => $record->file_path ? route('reports.download', $record) : null)
+                        ->openUrlInNewTab()
+                        ->visible(fn (ControleRelatorios $record): bool => $record->status === 'completo' && !empty($record->file_path)),
+
+                    // 2. PERMITIR EXCLUSÃO COM CONFIRMAÇÃO:
+                    Tables\Actions\DeleteAction::make(),
+                ]),
             ])
             ->bulkActions([
-                // Ação de exclusão em massa foi removida
+                Tables\Actions\BulkActionGroup::make([
+                    Tables\Actions\DeleteBulkAction::make(),
+                ]),
             ]);
     }
-
-    /**
-     * Impede que novos registros sejam criados pela interface do Filament.
-     */
+    
+    // As funções abaixo continuam as mesmas
     public static function canCreate(): bool
     {
         return false;
     }
 
-    /**
-     * Impede que registros sejam deletados pela interface do Filament.
-     */
-    public static function canDelete(\Illuminate\Database\Eloquent\Model $record): bool
-    {
-        return false;
-    }
+    // A função canDelete() foi removida para PERMITIR a exclusão através das Actions.
+    // public static function canDelete(...): bool { return false; }
 
     public static function getRelations(): array
     {
-        return [
-            //
-        ];
+        return [];
     }
 
     public static function getPages(): array
     {
         return [
             'index' => Pages\ListControleRelatorios::route('/'),
-            // 'create' => Pages\CreateControleRelatorios::route('/create'), // Rota de criação removida
-            'edit' => Pages\EditControleRelatorios::route('/{record}/edit'),
+            // As rotas de 'create' e 'edit' são removidas para impedir a criação/edição.
         ];
     }
 }

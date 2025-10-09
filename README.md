@@ -24,6 +24,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
  
+## [00.05.10] - 2025-10-09
+- This is a devepment beta version, ready for client to test.
+- The first version to be released will have the version updated to [1.0.0].
+
+### Changed
+- Controle de Relatorios on admin panel: 
+=> added exclusion of a specific report or a bulk selection of reports.
+=> added sorting columns by report name, user name, report status or creation date.
+
 ## [00.05.09] - 2025-10-08
 - This is a devepment beta version, ready for client to test.
 - The first version to be released will have the version updated to [1.0.0].
