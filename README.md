@@ -24,6 +24,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
  
+## [00.06.01] - 2025-11-24
+### Fixed
+- relat-02-prcpstrss mistyped in the logo name caused missing neurodiv logo in the pdf report.
+
 ## [00.06.00] - 2025-11-24
 ### Changed
 - Hero texts updated according to the client's request.
