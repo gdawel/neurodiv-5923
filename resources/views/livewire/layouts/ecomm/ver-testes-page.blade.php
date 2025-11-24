@@ -17,8 +17,9 @@
                         <div class="flex items-center gap-x-2">
                             <p class="text-xs uppercase tracking-wide text-gray-500">Cliente</p>
                         </div>
-                        <div class="mt-1 flex items-center gap-x-2">
-                            <div>{{ $detalhesCliente->firstName }} {{ $detalhesCliente->lastName }}</div>
+                        <div class="mt-1 flex items-center gap-x-2  text-gray-800 dark:text-gray-200">
+                            {{-- <div>{{ $detalhesCliente->firstName }} {{ $detalhesCliente->lastName }}</div> --}}
+                            <div>{{ auth()->user()->name }}</div>
                         </div>
                     </div>
                 </div>

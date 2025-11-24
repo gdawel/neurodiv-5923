@@ -6,7 +6,7 @@
       <div class="flex items-center justify-between">
         <a class="flex-none text-xl font-semibold dark:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="/" 
           >
-          <img class="w-40 bg-white" src="{{ asset('images/sobrare_logo_1.jpg') }}" alt="SOBRARE logo" />
+          <img class="w-40 bg-white" src="{{ asset('images/neurodiv_logo_dark.png') }}" alt="NeuroDiv logo" />
           </a>
         <div class="md:hidden">
           <button type="button" class="hs-collapse-toggle flex justify-center items-center w-9 h-9 text-sm font-semibold rounded-lg border border-gray-200 text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" data-hs-collapse="#navbar-collapse-with-animation" aria-controls="navbar-collapse-with-animation" aria-label="Toggle navigation">
@@ -30,6 +30,11 @@
            {{--  <a wire:navigate class="font-medium {{ request()->is('neurodiv') ? 'text-blue-600' : 'text-gray-500' }}  py-3 md:py-6 dark:text-blue-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="/neurodiv" aria-current="page">
               NeuroDiv Home</a>
  --}}
+            <a  class="font-medium {{ request()->is('vitrine') ? 'text-blue-600' : 'text-gray-500' }} hover:text-gray-400 py-3 md:py-6 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" 
+                href="https://sobrare.com.br" target="_blank">
+              SOBRARE
+            </a>
+
             <a wire:navigate class="font-medium {{ request()->is('vitrine') ? 'text-blue-600' : 'text-gray-500' }} hover:text-gray-400 py-3 md:py-6 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="/vitrine">
               Vitrine de Produtos
             </a>
@@ -58,7 +63,7 @@
                   {{-- PRODUCTION: The button is a real, clickable link --}}
                   <a wire:navigate class="py-2.5 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="/login">
                       <svg class="flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
-                      Entrar
+                      Começar
                   </a>
               
                   {{-- TESTING/LOCAL: The "button" is a span, so it's not clickable and has no href --}}

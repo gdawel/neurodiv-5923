@@ -5,7 +5,7 @@
 
 <h3>SOBRARE</h3>
 
-<p> The Sociedade Brasileira de Resiliência (SOBRARE) has sponsored the development of a system of psychological tests in the fiel of neurodiversity.</p>
+<p> The Sociedade Brasileira de Resiliência (SOBRARE) has sponsored the development of a system of psychological tests in the field of neurodiversity.</p>
 
 <p>This application implements psychological tests and reports, according with the studies from George Barbosa, PhD.</p>
 
@@ -24,6 +24,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
  
+## [00.06.00] - 2025-11-24
+### Changed
+- Hero texts updated according to the client's request.
+- Added whatsapp support number to the buttom in the Home Page.
+- Moved the SOBRARE main site access link as a new menu item in the navbar.
+- Changed text "Entrar" by "Começar" in the navbar, according to the client's request.
+- Changed the logo in the navbar to a new one sent by the client.
+- Changed the favicon to the new favicon sent by the client.
+- Changed neurodiv_logo in all pdf reports.
+
+### Fixed
+- Fix user's name the "ver-testes" by the auth()->user()->name. 
+- Fix font contrast in the user's name in the "Meus Pedidos" for the dark mode.
+
+
+
 ## [00.05.11] - 2025-10-09
 - Fix text aligment in the footer.
 - Enable "Entrar" buttom in navbar, so the clients can have access to the system.

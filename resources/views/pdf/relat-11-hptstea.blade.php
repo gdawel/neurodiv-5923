@@ -53,7 +53,7 @@
                 <h1 style="text-align: left; font-size: 18px; margin-top: 50px;">{{ $dadosRelatorio['tituloTeste'] }}</h1>
             </td>
             <td style="width: 50%; vertical-align: top; text-align: right;">
-                <img src="{{ public_path('images/logo_neudiv_1.jpg') }}" style="height: 60px;">
+                <img src="{{ public_path('images/neurodiv_logo_1.png') }}" style="height: 60px;">
                 <h2 style="font-size: 16px; border: none; margin-top: 10px;">NEURODIVERSIDADE</h2>
                 <p>
                     <strong>Cod. interno:</strong> {{ $dadosRelatorio['orders_id'] }}/{{ $dadosRelatorio['idadeCliente'] }}-{{ $dadosRelatorio['estadoNascimentoCliente'] }}
