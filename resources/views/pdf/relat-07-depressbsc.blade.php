@@ -49,9 +49,9 @@
             @php
                 // Determina o subtítulo do grupo de respostas
                 $subHeading = match ($item->sequencia) {
-                    1 => 'Componentes dos Distúrbios da Afetividade - depressão no humor / afeto (CID 10 F32):',
-                    94 => 'Componentes de Obsessão e Compulsividade (CID 10 F42):',
-                    104 => 'Componentes depressivos na noção do juízo/ julgamento e tomada de decisão (CID 10 F32):',
+                    1 => 'Componentes Relacionados aos Distúrbios da Afetividade - depressão no humor / afeto (CID 10 F32):',
+                    94 => 'Componentes Relacionados com Obsessão e Compulsividade (CID 10 F42):',
+                    104 => 'Componentes depressivos relacionados com a noção do juízo/ julgamento e tomada de decisão (CID 10 F32):',
                     default => '',
                 };
             @endphp

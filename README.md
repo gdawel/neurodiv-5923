@@ -24,6 +24,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
  
+## [00.06.02] - 2026-01-27
+### Changed
+* User requested changes in reports:
+- rel_03-OrdncAsst - changes in the graph title (ControladorRelatorios)
+- rel_05-AnsddDthd - no change in code required. TextoResposta spreadsheet updated by user.
+- rel_07-Depressbsc - changes in subtitles.
+- rel_08-CmptRpttv - minor changed in the legend of the table. Moved to a separated row.
+- rel_09-InvetrTDA_TDAH - no change in code required. TextoResposta spreadsheet updated by user.
+
 ## [00.06.01] - 2025-11-24
 ### Fixed
 - relat-02-prcpstrss mistyped in the logo name caused missing neurodiv logo in the pdf report.

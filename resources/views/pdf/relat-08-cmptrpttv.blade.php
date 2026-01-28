@@ -120,6 +120,13 @@
                 <td class="font-bold">de tendência na repetição de comportamentos</td>
                 <td>
                     <p><strong>Observação:</strong> Os comportamentos repetitivos estão presentes no TEA. Também estão presentes no Transtorno Obsessivo-Compulsivo, no Transtorno de Personalidade Anancástica, na Doença de Parkinson e na Síndrome de Tourette. Em particular no TEA de Nível 1 (Síndrome de Asperger), se tornam discretos devido à aprendizagem social que ocorreu durante os anos de vida. Quanto maior for a idade, maior será o treino social e maior será a probabilidade de NÃO ser detectado. Verifique com seu/sua psicólogo(a), qual dos quadros é mais possível em suas respostas.</p>
+                    
+                </td>
+            </tr>
+            <tr>
+                
+                <td span="4">
+                    
                     <p class="mt-4"><strong>Legenda:</strong> CM = Comportamentos Motores e reguladores / IM = Insistência na mesmice / RS = Respostas Sensoriais</p>
                 </td>
             </tr>

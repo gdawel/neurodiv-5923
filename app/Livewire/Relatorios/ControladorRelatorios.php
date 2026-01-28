@@ -498,8 +498,8 @@ class ControladorRelatorios extends Component
                     'options' => [
                         'title' => [
                             'display' => true,
-                            'text' => 'Relevância por Assunto',
-                            'fontSize' => 18,
+                            'text' => 'Relevância por Assunto para levar aos meus tratamentos clínicos',
+                            'fontSize' => 16,
                             'fontColor' => '#333',
                         ],
                         'legend' => ['display' => false], // Legenda no topo pode ser redundante
