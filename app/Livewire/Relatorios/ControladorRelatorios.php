@@ -495,19 +495,26 @@ class ControladorRelatorios extends Component
                             ],
                         ]],
                     ],
-                    'options' => [
+                     'options' => [
                         'title' => [
                             'display' => true,
-                            'text' => 'Relevância por Assunto para levar aos meus tratamentos clínicos',
+                            'text' => [
+                                'Relevância por Assunto', 
+                                '(para levar aos meus tratamentos clínicos)'
+                            ],
                             'fontSize' => 16,
                             'fontColor' => '#333',
                         ],
-                        'legend' => ['display' => false], // Legenda no topo pode ser redundante
-                        'scales' => [
-                            'xAxes' => [['ticks' => ['min' => 0, 'max' => 20]]], // Ajuste o 'max' se necessário
-                            'yAxes' => [['ticks' => ['fontSize' => 10]]], // Diminui a fonte dos eixos para caber
-                        ],
                         'plugins' => [
+                            // Adicionando o Subtítulo aqui
+                            'subtitle' => [
+                                'display' => true,
+                                'text' => 'para levar aos meus tratamentos clínicos',
+                                'fontSize' => 11, // Fonte menor como você sugeriu
+                                'fontColor' => '#666', // Cor mais suave (cinza)
+                                'fontStyle' => 'italic', // Itálico para dar um charme e separar do título
+                                'padding' => 10
+                            ],
                             'datalabels' => [
                                 'display' => true,
                                 'color' => '#fff',
@@ -515,6 +522,11 @@ class ControladorRelatorios extends Component
                                 'anchor' => 'center',
                                 'align' => 'center',
                             ],
+                        ],
+                        'legend' => ['display' => false],
+                        'scales' => [
+                            'xAxes' => [['ticks' => ['min' => 0, 'max' => 20]]],
+                            'yAxes' => [['ticks' => ['fontSize' => 10]]],
                         ],
                     ],
                 ];
@@ -554,7 +566,7 @@ class ControladorRelatorios extends Component
                         ]);
                        
                         Storage::disk('local')->put($nomePDF, $pdf->output());
-
+                        
                          $controleRelatorios->update(['status' => 'completo', 'file_path' => $nomePDF]);
                          $orderItens->update(['testeStatus' => 'concluido']);
                     }

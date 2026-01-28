@@ -24,6 +24,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
  
+## [00.06.04] - 2026-01-28
+### Fixed
+- rel_03-OrdncAsst - changes in the graph title (ControladorRelatorios). Subtitle added as per client request.
+
 ## [00.06.03] - 2026-01-27
 ### Fixed
 - rel_08-CmptRpttv - minor changed in the legend of the table. Moved out of the table.
