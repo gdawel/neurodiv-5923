@@ -123,15 +123,18 @@
                     
                 </td>
             </tr>
-            <tr>
+            {{-- <tr>
                 
-                <td span="4">
+                <td rowspan="4">
                     
-                    <p class="mt-4"><strong>Legenda:</strong> CM = Comportamentos Motores e reguladores / IM = Insistência na mesmice / RS = Respostas Sensoriais</p>
+                    <p class="mt-4"><strong>Legenda:</strong><br> CM = Comportamentos Motores e reguladores<br>IM = Insistência na mesmice<br>RS = Respostas Sensoriais</p>
                 </td>
-            </tr>
+            </tr> --}}
         </tbody>
     </table>
+    <div>
+        <p class="mt-4"><strong>Legenda:</strong><br> CM = Comportamentos Motores e reguladores<br>IM = Insistência na mesmice<br>RS = Respostas Sensoriais</p>
+    </div>
     
     <div class="mt-8 sm:mt-12">
         {{-- <h4 class="text-lg font-semibold text-gray-800 dark:text-neutral-200">Como entender o seu resultado de estresse e fadiga:<br></h4> --}}
