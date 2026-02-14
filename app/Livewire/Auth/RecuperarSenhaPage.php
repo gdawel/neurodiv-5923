@@ -72,9 +72,10 @@ class RecuperarSenhaPage extends Component
     });
         if($status === Password::PASSWORD_RESET) {
             $this->alert('success', 'Senha redefinida com sucesso', [
-            'position' => 'top-end',
+            'position' => 'center',
             'timer' => 5000,
             'toast' => true,
+            'timerProgressBar' => true,
             ]);
             return redirect('/login');
         } else {
@@ -82,6 +83,7 @@ class RecuperarSenhaPage extends Component
             'position' => 'center',
             'timer' => 5000,
             'toast' => true,
+            'timerProgressBar' => true,
             ]);
             return redirect('/esqueceu-senha');
         }
