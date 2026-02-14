@@ -48,10 +48,10 @@
             @php
                 // Determina o subtítulo do grupo de respostas
                 $subHeading = match ($item->sequencia) {
-                    1 => 'Componentes de Ansiedade [CID 10 F41]:',
-                    64 => 'Componentes de TDA e Hiperatividade [CID 10 F90]:',
-                    69 => 'Componentes de Alteração do Humor [CID 10 F30.1]:',
-                    79 => 'Componentes de TDA(H) e Impulsividade [CID 10 F90]:',
+                    1 => 'Componentes de Ansiedade:',
+                    64 => 'Componentes de TDA e Hiperatividade:',
+                    69 => 'Componentes de Alteração do Humor:',
+                    79 => 'Componentes de TDA(H) e Impulsividade:',
                     default => '',
                 };
             @endphp

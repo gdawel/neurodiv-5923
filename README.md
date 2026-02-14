@@ -24,6 +24,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
  
+## [00.07.00] - 2026-02-12
+### Added
+- pt_BR Laravel translation. E-mail from Laravel, like passowrd reset, are now located to pt_BR.
+- added /lang/pt_BR files
+
+### Fixed
+- rel_06-ansieddbsc - some text removed from the subtitles as per client request.
+- rel_07-depressbsc - some text removed from the subtitles as per client request.
+- text (stripe) removed from the checkout. Replaced by "cartão de crédito".
+- home page now allows the user to add images to the groups of tests by the admin control panel.
+- .env - system information changed from "SOBRARE" to "NEURODIV".
+- .env - Email configured to hostinger, as per user request.
+
 ## [00.06.04] - 2026-01-28
 ### Fixed
 - rel_03-OrdncAsst - changes in the graph title (ControladorRelatorios). Subtitle added as per client request.
