@@ -73,14 +73,14 @@ class RecuperarSenhaPage extends Component
         if($status === Password::PASSWORD_RESET) {
             $this->alert('success', 'Senha redefinida com sucesso', [
             'position' => 'top-end',
-            'timer' => 4000,
+            'timer' => 5000,
             'toast' => true,
             ]);
             return redirect('/login');
         } else {
             $this->alert('error', 'Erro ao redefinir a senha. Por favor, solicite nova redenição de senha', [
             'position' => 'center',
-            'timer' => 4000,
+            'timer' => 5000,
             'toast' => true,
             ]);
             return redirect('/esqueceu-senha');

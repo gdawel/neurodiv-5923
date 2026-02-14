@@ -24,6 +24,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
  
+## [00.07.01] - 2026-02-12
+### Added
+- alert timer changed to 5000 in the recuperarSenha.
+
 ## [00.07.00] - 2026-02-12
 ### Added
 - pt_BR Laravel translation. E-mail from Laravel, like passowrd reset, are now located to pt_BR.
